@@ -1,0 +1,22 @@
+mat-card {
+  flex: 1 1 auto;
+  text-align: center;
+//  padding: 10;
+  border-radius: 14px;
+  background-color: #0F0E0E;
+
+}
+mat-card-title {
+  color: white
+}
+mat-card-header .mat-card-subtitle:not(:first-child) {
+    color: white
+}
+.mat-button{
+  color: white;
+}
+
+img {
+  width: 280px;
+  height: 450px;
+}
