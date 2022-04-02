@@ -1,12 +1,15 @@
+<div style = "background:#F7F5F2; height:650px">
+
 <app-navbar></app-navbar>
-<h2 style="margin: 15px 0 0 15px;">Hello {{ user?.Username }}! </h2>
+<h2 style="margin: 15px  15px;">Hello {{ user?.Username }}! </h2>
 <div style="display: flex; margin: 15px;">
-  <mat-card class='user-info'>
+  <mat-card class='userDetails' style ="background-color:; boder:1px solid black; border-radius: 22px; padding:30px">
+
     <mat-card-header>
-      <mat-card-title>Your Profile Information</mat-card-title>
+      <mat-card-title>Your Profile Details</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <h3><b>Name: </b>{{ this.user.Name }}</h3>
+
       <h3><b>Username: </b>{{ this.user.Username }}</h3>
       <h3><b>Email: </b>{{ user.Email }}</h3>
       <h3><b>Birthday: </b>{{ user.Birthday | date : 'mediumDate' }}</h3>
@@ -14,6 +17,7 @@
       <button
         class='profile-btn'
         mat-raised-button
+        (click)="openEditUserProfile()"
         style='margin-right: 10px;' color="primary">
         Edit Profile
       </button>
@@ -52,4 +56,5 @@
       </mat-card-actions>
     </mat-card>
   </div>
+</div>
 </div>

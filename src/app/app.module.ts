@@ -17,19 +17,19 @@ import { UserRegistrationFormComponent } from './user-registration-form/user-reg
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
 import { GenreCardComponent } from './genre-card/genre-card.component';
 import { SynopsisCardComponent } from './synopsis-card/synopsis-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DirectorCardComponent } from './director-card/director-card.component';
 import { DescriptionCardComponent } from './description-card/description-card.component';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
   { path: 'movies', component: MovieCardComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
-  { path: 'profile', component: UserProfileComponent },
+  { path: 'profile', component: ProfileViewComponent },
 ];
 
 @NgModule({
@@ -39,13 +39,13 @@ UserRegistrationFormComponent,
 UserLoginFormComponent,
 MovieCardComponent,
 WelcomePageComponent,
-UserProfileComponent,
 GenreCardComponent,
 SynopsisCardComponent,
 NavbarComponent,
 DirectorCardComponent,
 DescriptionCardComponent,
 ProfileViewComponent,
+UserEditComponent,
 
 
 ],

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-//import { UserEditComponent } from '../user-edit/user-edit.component';
+import { UserEditComponent } from '../user-edit/user-edit.component';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { DescriptionCardComponent } from '../description-card/description-card.component';
 import { GenreCardComponent } from '../genre-card/genre-card.component';
@@ -78,11 +78,11 @@ export class ProfileViewComponent implements OnInit {
   /**
    * Opens dialog to edit user information
    */
-  // openEditUserProfile(): void {
-  //   this.dialog.open(UserEditComponent, {
-  //     width: '500px'
-  //   });
-  // }
+  openEditUserProfile(): void {
+    this.dialog.open(UserEditComponent, {
+      width: '500px'
+    });
+  }
 
   // filter out the movies that aren't favs
     getFavs(): void {
