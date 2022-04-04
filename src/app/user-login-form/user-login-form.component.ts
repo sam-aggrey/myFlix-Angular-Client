@@ -33,7 +33,11 @@
    ngOnInit(): void {
     }
 
-
+    /**
+     * Send a request that logs in the user
+     * Saves the username and token in localSotrage
+     * After loged in, re-route to movies page 
+     */
    userLogin(): void {
      this.fetchApiData.userLogin(this.loginData).subscribe((response) => {
        this.dialogRef.close();
