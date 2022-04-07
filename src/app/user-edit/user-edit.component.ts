@@ -30,20 +30,20 @@ export class UserEditComponent implements OnInit {
   /**
    * Updates user details
    */
-  editUserProfile(): void {
-    this.fetchApiData.editUserProfile().subscribe((res) => {
-      this.dialogRef.close();
-      window.location.reload();
-      localStorage.setItem('username', res.Username)
-      console.log(res)
-      this.snackBar.open(this.userData.Username, 'Successfully updated user details!', {
-        duration: 3000
-      });
-    }, (res) => {
-      this.snackBar.open(res, 'OK', {
-        duration: 3000
-      });
-    })
-  }
+   editUserProfile(): void {
+         this.fetchApiData.editUserProfile(this.userData).subscribe((resp) => {
+           this.dialogRef.close();
+           localStorage.setItem('user', resp.Username);
+           this.snackBar.open('Profile  updated successfully.', 'OK', {
+             duration: 2000
+           });
+           setTimeout(() => {
+             window.location.reload();
+           });
+         });
+       }
+       closeDialog(): void {
+         this.dialogRef.close();
+       }
 
 }

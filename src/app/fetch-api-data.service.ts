@@ -222,19 +222,19 @@ export class FetchApiDataService {
  * @param userData
  * @returns updated user information in JSON format
  */
-  editUserProfile(): Observable<any> {
-    const token = localStorage.getItem('token');
-    const username = localStorage.getItem('user');
-    return this.http.put(apiUrl + `users/${username}`, {
-      headers: new HttpHeaders(
-        {
-          Authorization: 'Bearer ' + token,
-        })
-    }).pipe(
-      map(this.extractResponseData),
-      catchError(this.handleError)
-    );
-  }
+ editUserProfile(userData: any): Observable<any> {
+   const token = localStorage.getItem('token');
+   const username = localStorage.getItem('user');
+   return this.http.put(apiUrl + `users/${username}`, userData, {
+     headers: new HttpHeaders(
+       {
+         Authorization: 'Bearer ' + token,
+       })
+   }).pipe(
+     map(this.extractResponseData),
+     catchError(this.handleError)
+   );
+ }
 
   // Delete User Profile
   /**
